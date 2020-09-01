@@ -13,8 +13,14 @@ public class TicketController {
 	@Reference(group = "hello-service", version = "1.0.0")
 	HelloService helloService;
 	
+	
 	@RequestMapping("/test")
-	public String test(String name) {
+	public String test() {
+		return "here is ticket-service";
+	}
+	
+	@RequestMapping("/hello")
+	public String hello(String name) {
 		return helloService.sayHello(name);
 	}
 
